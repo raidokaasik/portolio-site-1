@@ -50,7 +50,7 @@ header {
 
 main {
   padding: 4rem;
-  min-height: calc(100vh-60px);
+  min-height: calc(91vh);
   .icons {
     margin-top: 1rem;
     a {
@@ -69,6 +69,8 @@ main {
     }
   }
 }
+
+//About page
 
 .about-info {
   display: grid;
@@ -104,6 +106,77 @@ main {
   }
   .job3 {
     grid-area: job3;
+  }
+}
+
+//Projects page
+
+.projects-info {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 0.7rem;
+  .image-container {
+    width: 100%;
+    height: auto;
+    img {
+      width: 100%;
+      height: 100%;
+      border: 2px #fff solid;
+
+      &:hover {
+        opacity: 0.7;
+        border-color: $secondary-color;
+        @include easeOut;
+      }
+    }
+  }
+}
+
+.btn {
+  display: block;
+  padding: 0.5rem 1rem;
+  border: 0;
+  margin-bottom: 0.3rem;
+  width: 100%;
+
+  &:hover {
+    background: $secondary-color;
+    color: setTextColor($secondary-color);
+  }
+}
+
+.btn-dark {
+  @extend .btn;
+  background: #242424;
+}
+
+.btn-light {
+  background: #fff;
+  color: #242424;
+  @extend .btn;
+}
+
+//Contact Page
+
+.contact-info {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-top: 4rem;
+  .box {
+    border: 3px #fff solid;
+    padding: 1rem 2.6rem;
+    font-size: 1.5rem;
+    margin-bottom: 2.5rem;
+    @include easeOut;
+    &:hover {
+      background: $secondary-color;
+      color: setTextColor($secondary-color);
+      h3 {
+        color: setTextColor($secondary-color);
+      }
+    }
   }
 }
 
